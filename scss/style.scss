@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 // navbar
 .navbar{
-  background-color: orange;
+  background-color: #FFB800;
   height: 70px;
   .navbar-brand{
     margin-left: 60px;
@@ -18,11 +21,98 @@
 }
 //end of navbar
 
+//ball animation
+#ball{
+  animation: basket 10s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes basket{
+  from{
+    transform: translate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 //content
 .content{
   width: 100%;
-  height: 700px;
+  height: 500px;
   background-color: black;
+  display: flex;
+  .text{
+    width: 50%;
+    height: 100%;
+    .text-content{
+      margin-left: 70px;
+      margin-top: 100px;
+      color: white;
+      p{
+        color: #FFB800;
+      }
+      span{
+        color: #FFB800;
+      }
+      button{
+        width: 120px;
+        height: 45px;
+        border-radius: 5px;
+        margin-top: 40px;
+        border: none;
+        outline: none;
+      }
+      .btn-hire{
+        background-color: #FFB800;
+      }
+      .btn-resume{
+        border: 1px solid white;
+        color: white;
+        background-color: black;
+      }
+    }
+  }
+  .hero{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    .box-one{
+      width: 200px;
+      height: 250px;
+      background-color: #FFB800;
+      position: absolute;
+      top: 70px;
+      left: 150px;
+      border: 1px solid rgba(255, 255, 255, 0.603);
+      border-radius: 5px;
+    }
+    .box-two{
+      width: 200px;
+      height: 250px;
+      background-color: #FFB800;
+      position: absolute;
+      top: 110px;
+      left: 200px;
+      border: 1px solid rgba(255, 255, 255, 0.603);
+      border-radius: 5px;
+    }
+    .box-three{
+      width: 200px;
+      height: 250px;
+      background-color: #FFB800;
+      position: absolute;
+      top: 150px;
+      left: 130px;
+      border: 1px solid rgba(255, 255, 255, 0.603);
+      border-radius: 5px;
+    }
+    .ball{
+      position: absolute;
+      right: 60px;
+      bottom: 10px;
+    }
+  }
 }
 //end of content
 
