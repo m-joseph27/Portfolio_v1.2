@@ -6,10 +6,31 @@
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
 }
+html{
+  scroll-behavior: smooth;
+  ::-webkit-scrollbar {
+    width: 10px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: black;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #FFB800;
+    }
+    ::-webkit-scrollbar-thumb:window-inactive {
+      background:black; 
+    }
+}
 // navbar
 .navbar{
   background-color: #FFB800;
   height: 70px;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  width: 100%;
   .navbar-brand{
     margin-left: 60px;
     font-weight: bold;
@@ -19,22 +40,6 @@
     font-weight: bold;
   }
 }
-//end of navbar
-
-//ball animation
-#ball{
-  animation: basket 10s infinite linear;
-  transform-origin: center;
-  transform-box: fill-box;
-}
-@keyframes basket{
-  from{
-    transform: translate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 //content
 .content{
@@ -42,6 +47,7 @@
   height: 500px;
   background-color: black;
   display: flex;
+  margin-top: 70px;
   .text{
     width: 50%;
     height: 100%;
@@ -107,15 +113,60 @@
       border: 1px solid rgba(255, 255, 255, 0.603);
       border-radius: 5px;
     }
-    .ball{
-      position: absolute;
-      right: 60px;
-      bottom: 10px;
-    }
   }
 }
 //end of content
 
+// About Me
+  .about-wrapper{
+    width: 100%;
+    height: 600px;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    aside{
+      .box-aside-one{
+        width: 200px;
+        height: 250px;
+        background-color: #FFB800;
+        margin-top: 120px;
+        margin-left: 80px;
+        border: 1px solid rgba(255, 255, 255, 0.603);
+        border-radius: 5px;
+      }
+      .box-aside-two{
+        width: 200px;
+        height: 250px;
+        background-color: #FFB800;
+        margin: -190px 120px;
+        border: 1px solid rgba(255, 255, 255, 0.603);
+        border-radius: 5px;
+      }
+    }
+    main{
+      padding: 30px;
+    }
+  }
+// End of About Me
+
+// Project
+  .project-wrapper{
+    width: 100%;
+    height: 600px;
+    background-color: black;
+    color: white;
+  }
+// End Project
+
+// Resume
+  .resume-wrapper{
+    width: 100%;
+    height: 700px;
+    background-color: black;
+    color: white;
+  }
+// End of Resume
 
 // on phone
 
